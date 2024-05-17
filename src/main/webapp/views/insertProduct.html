@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>INSERT PRODUCT</h1>
+    <form th:action="@{/insertProduct}" th:object="${p}" method="post" enctype="multipart/form-data">
+<!--        <div class="mb-3">-->
+<!--            <label for="proId" class="form-label">Product Id</label>-->
+<!--            <input th:field="*{proId}" class="form-control" id="proId"/>-->
+<!--        </div>-->
+        <div class="mb-3">
+            <label for="proName" class="form-label">Product Name</label>
+            <input th:field="*{proName}" class="form-control" id="proName"/>
+        </div>
+        <div class="mb-3">
+            <label for="producer" class="form-label">Producer</label>
+            <input th:field="*{producer}" class="form-control" id="producer"/>
+        </div>
+        <div class="mb-3">
+            <label for="yearMaking" class="form-label">Year Making</label>
+            <input th:field="*{yearMaking}" class="form-control" id="yearMaking"/>
+        </div>
+        <div class="mb-3">
+            <label for="expireDate" class="form-label">Expire Date</label>
+            <input th:field="*{expireDate}" class="form-control" id="expireDate" type="date"/>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input th:field="*{price}" class="form-control" id="price" type="number"/>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image:</label>
+            <input th:field="*{imageFile}" class="form-control" id="image" type="file"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Insert</button>
+        <button type="reset" class="btn btn-secondary">Clear</button>
+    </form>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
